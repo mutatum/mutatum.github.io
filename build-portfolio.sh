@@ -8,10 +8,18 @@ set -e  # Exit on any error
 echo "🚀 Building Mathematical & Computational Sciences Portfolio..."
 
 # Check if we're in the right directory
-if [ ! -f "CMakeLists.txt" ] || [ ! -d "portfolio-website" ]; then
+if [ ! -d "portfolio-website" ]; then
     echo "❌ Error: Please run this script from the repository root"
     exit 1
 fi
+
+# Final output directory
+FINAL_DIR="docs"
+
+# Clean previous builds
+echo "🧹 Cleaning previous builds..."
+rm -rf "$FINAL_DIR"
+mkdir -p "$FINAL_DIR"
 
 # Build the portfolio website
 echo "📱 Building portfolio website..."
@@ -27,21 +35,31 @@ fi
 echo "🔨 Building website..."
 npm run build
 
-echo "✅ Portfolio website built successfully!"
-echo "📁 Website files are in: portfolio-website/dist/"
+# Copy website to final directory
+echo "📁 Copying website to final directory..."
+cp -r dist/* "../$FINAL_DIR/"
 
 cd ..
+echo "✅ Portfolio website built successfully!"
 
 # Build Quarto documentation if Quarto is available
 if command -v quarto &> /dev/null; then
     echo "📚 Building Quarto documentation..."
-    cd quarto-projects
+    QUARTO_SOURCE_DIR="quarto-projects"
+    QUARTO_OUTPUT_DIR_REL="$FINAL_DIR/quarto-projects"
+    QUARTO_OUTPUT_DIR_ABS="$(pwd)/$QUARTO_OUTPUT_DIR_REL"
+    
+    mkdir -p "$QUARTO_OUTPUT_DIR_ABS"
+
+    cd "$QUARTO_SOURCE_DIR"
     
     echo "  🔄 Rendering Euler methods analysis..."
-    quarto render euler-methods-analysis.qmd
-    
+    quarto render euler-methods-analysis.qmd --to html -o euler-methods-analysis.html
+    mv euler-methods-analysis.html "$QUARTO_OUTPUT_DIR_ABS/"
+
     echo "  🔄 Rendering mathematical foundations..."
-    quarto render mathematical-foundations.qmd
+    quarto render mathematical-foundations.qmd --to html -o mathematical-foundations.html
+    mv mathematical-foundations.html "$QUARTO_OUTPUT_DIR_ABS/"
     
     echo "✅ Quarto documentation built successfully!"
     cd ..
@@ -50,33 +68,12 @@ else
     echo "   Install Quarto from https://quarto.org to build technical documentation"
 fi
 
-# Build the C++ project if CMake is available
-if command -v cmake &> /dev/null; then
-    echo "⚙️  Building C++ numerical methods project..."
-    
-    # Create build directory if it doesn't exist
-    mkdir -p build
-    cd build
-    
-    # Configure and build
-    cmake ..
-    make -j$(nproc)
-    
-    echo "✅ C++ project built successfully!"
-    cd ..
-else
-    echo "⚠️  CMake not found - skipping C++ project build"
-fi
-
 echo ""
-echo "🎉 Portfolio build complete!"
+echo "✅ Website build complete."
+echo "   Your website is ready in the '$FINAL_DIR' directory."
+echo "   Push this directory to your GitHub repository to publish on GitHub Pages."
 echo ""
-echo "📋 Summary:"
-echo "  📱 Website: portfolio-website/dist/index.html"
-echo "  📚 Documentation: quarto-projects/*.html"
-echo "  ⚙️  C++ binaries: build/"
-echo ""
-echo "🌐 To view the website locally:"
-echo "  cd portfolio-website && npm start"
+echo "🌐 To view the website locally, you can use a simple HTTP server:"
+echo "   python3 -m http.server --directory $FINAL_DIR"
 echo ""
 echo "📤 Ready for deployment!"
