@@ -1,3 +1,0 @@
-/home/runner/work/mutatum.github.io/mutatum.github.io/build/CMakeFiles/euler_methods.dir
-/home/runner/work/mutatum.github.io/mutatum.github.io/build/CMakeFiles/edit_cache.dir
-/home/runner/work/mutatum.github.io/mutatum.github.io/build/CMakeFiles/rebuild_cache.dir
