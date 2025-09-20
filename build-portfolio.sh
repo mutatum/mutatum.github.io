@@ -14,12 +14,11 @@ if [ ! -d "portfolio-website" ]; then
 fi
 
 # Final output directory
-FINAL_DIR="docs"
+FINAL_DIR="."
 
 # Clean previous builds
 echo "🧹 Cleaning previous builds..."
-rm -rf "$FINAL_DIR"
-mkdir -p "$FINAL_DIR"
+rm -rf index.html css js assets quarto-projects/*.html quarto-projects/*_files
 
 # Build the portfolio website
 echo "📱 Building portfolio website..."
@@ -46,20 +45,17 @@ echo "✅ Portfolio website built successfully!"
 if command -v quarto &> /dev/null; then
     echo "📚 Building Quarto documentation..."
     QUARTO_SOURCE_DIR="quarto-projects"
-    QUARTO_OUTPUT_DIR_REL="$FINAL_DIR/quarto-projects"
-    QUARTO_OUTPUT_DIR_ABS="$(pwd)/$QUARTO_OUTPUT_DIR_REL"
+    QUARTO_OUTPUT_DIR_REL="quarto-projects"
     
-    mkdir -p "$QUARTO_OUTPUT_DIR_ABS"
+    mkdir -p "$QUARTO_OUTPUT_DIR_REL"
 
     cd "$QUARTO_SOURCE_DIR"
     
     echo "  🔄 Rendering Euler methods analysis..."
-    quarto render euler-methods-analysis.qmd --to html -o euler-methods-analysis.html
-    mv euler-methods-analysis.html "$QUARTO_OUTPUT_DIR_ABS/"
+    quarto render euler-methods-analysis.qmd --to html --output-dir ..
 
     echo "  🔄 Rendering mathematical foundations..."
-    quarto render mathematical-foundations.qmd --to html -o mathematical-foundations.html
-    mv mathematical-foundations.html "$QUARTO_OUTPUT_DIR_ABS/"
+    quarto render mathematical-foundations.qmd --to html --output-dir ..
     
     echo "✅ Quarto documentation built successfully!"
     cd ..
@@ -70,10 +66,10 @@ fi
 
 echo ""
 echo "✅ Website build complete."
-echo "   Your website is ready in the '$FINAL_DIR' directory."
+echo "   Your website is ready in the repository root."
 echo "   Push this directory to your GitHub repository to publish on GitHub Pages."
 echo ""
 echo "🌐 To view the website locally, you can use a simple HTTP server:"
-echo "   python3 -m http.server --directory $FINAL_DIR"
+echo "   python3 -m http.server"
 echo ""
 echo "📤 Ready for deployment!"
