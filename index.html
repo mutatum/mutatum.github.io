@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio et curriculum vitae de Mutatum - Mathématiques, programmation et projets numériques." />
+  <title>Mutatum · Mathématiques & Programmation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-content">
+      <a class="brand" href="#top">
+        <span class="brand-mark">∑</span>
+        <span class="brand-text">Mutatum</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+          <span class="sr-only">Menu</span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <ul id="primary-menu">
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#formation">Formation</a></li>
+          <li><a href="#experience">Expérience</a></li>
+          <li><a href="#competences">Compétences</a></li>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#interets">Intérêts</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Changer le thème">
+        <span class="theme-icon" data-theme="light" aria-hidden="true">☀️</span>
+        <span class="theme-icon" data-theme="dark" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="profil">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Mathématiques • Simulation numérique • Programmation</p>
+          <h1 id="profil">Profil</h1>
+          <p class="lead">
+            Déscolarisé devenu programmeur, une passion fondamentale pour les mathématiques est née en moi.
+            J’ai entrepris des études sans perdre de vue mon objectif malgré les embûches. Je souhaite mettre en
+            commun mes compétences au sein d’une équipe ou d’un projet animé par le même enthousiasme.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projets">Explorer les projets</a>
+            <a class="button ghost" href="#formation">Voir le parcours</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-gradient"></div>
+          <div class="hero-card-inner">
+            <h2>En deux mots</h2>
+            <p>Ingénierie des méthodes numériques, amour des équations, code élégant.</p>
+            <dl>
+              <div>
+                <dt>Localisation</dt>
+                <dd>Montpellier · Paris</dd>
+              </div>
+              <div>
+                <dt>Disponibilité</dt>
+                <dd>Stages, collaborations & missions freelance</dd>
+              </div>
+              <div>
+                <dt>Contact</dt>
+                <dd><a href="mailto:contact@mutatum.dev">contact@mutatum.dev</a></dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="formation" aria-labelledby="formation-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="formation-title">Formation</h2>
+          <p>Un parcours académique axé sur l’analyse mathématique, la simulation et l’optimisation.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <header>
+              <span class="timeline-period">2024 — 2026 · Montpellier</span>
+              <h3>Master de Mathématiques · Modélisation & Analyse Numérique</h3>
+            </header>
+            <ul>
+              <li>Analyse fonctionnelle : espaces, normes, théorèmes fondamentaux.</li>
+              <li>Analyse des EDP : existence, régularité, distributions.</li>
+              <li>Mécanique des milieux continus et des fluides.</li>
+              <li>Optimisation, programmation C++ et stage de recherche.</li>
+            </ul>
+          </article>
+          <article class="timeline-item">
+            <header>
+              <span class="timeline-period">2019 — 2020 & 2022 — 2024 · Montpellier</span>
+              <h3>Licence de Mathématiques</h3>
+            </header>
+            <ul>
+              <li>Analyse, algèbre, calcul différentiel, mesure & intégration.</li>
+              <li>Probabilités, statistiques, topologie, analyse complexe.</li>
+              <li>Optimisation convexe, modélisation stochastique.</li>
+            </ul>
+          </article>
+          <article class="timeline-item">
+            <header>
+              <span class="timeline-period">2018 — 2019 · Castelnau-le-Lez</span>
+              <h3>Baccalauréat Scientifique · Lycée Georges Pompidou</h3>
+            </header>
+            <p>Major en mathématiques malgré trois années de déscolarisation. Mention : 17/20 en mathématiques, 17/20 en physique.</p>
+          </article>
+          <article class="timeline-item">
+            <header>
+              <span class="timeline-period">2016 — 2018 · Paris</span>
+              <h3>École 42 Paris</h3>
+            </header>
+            <p>Apprentissage autonome, nombreux projets en C. Projet d’électronique embarquée : jeu Pong avec commande Wii Nunchuck, affichage LCD & VGA.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="experience-title">Expérience</h2>
+          <p>Des collaborations scientifiques aux missions opérationnelles, avec une constante : rigueur et curiosité.</p>
+        </div>
+        <div class="experience-grid">
+          <article class="experience-card">
+            <span class="experience-period">Janvier — Mai 2025 · Montpellier</span>
+            <h3>Stage d’initiation à la recherche · Université de Montpellier</h3>
+            <p>Encadré par François Vilar. Étude des équations d’Euler compressibles, implémentation des flux HLL, HLLC et Roe corrigé. Bibliographie approfondie & restitution écrite et orale.</p>
+            <ul>
+              <li>Analyse de la stabilité et de la précision des flux numériques.</li>
+              <li>Implémentations C++ structurées pour parallélisation.</li>
+              <li>Exploration des variantes DG et méthodes hybrides.</li>
+            </ul>
+          </article>
+          <article class="experience-card">
+            <span class="experience-period">Été 2025 · Paris</span>
+            <h3>Stage volontaire · Inria (Equipe enseignée par Nicolas Seguin & François Vilar)</h3>
+            <p>Participation à des travaux sur les méthodes numériques haute-fidélité. Contribution à la modélisation et au prototypage logiciel pour la simulation des fluides compressibles.</p>
+          </article>
+          <article class="experience-card">
+            <span class="experience-period">Été 2023 · Sligo, Irlande</span>
+            <h3>Kitchen Porter · Aide cuisine</h3>
+            <p>Immersion dans un environnement international rapide. Renforcement de l’endurance, de l’organisation et du travail en équipe.</p>
+          </article>
+          <article class="experience-card">
+            <span class="experience-period">2020 — 2021</span>
+            <h3>E-commerce · Meta Ads & Shopify</h3>
+            <p>Pendant la période COVID : stratégies d’acquisition payantes, automatisation d’inventaire et relation client.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="competences" aria-labelledby="competences-title">
+      <div class="container skills-layout">
+        <div class="section-header">
+          <h2 id="competences-title">Compétences</h2>
+          <p>Un socle multidisciplinaire mêlant mathématiques appliquées, développement logiciel et communication.</p>
+        </div>
+        <div class="skills-columns">
+          <article class="skill-block">
+            <h3>Techniques</h3>
+            <ul class="pill-list">
+              <li>Python avancé</li>
+              <li>C++/C avancé</li>
+              <li>GNU/Linux</li>
+              <li>Git & GitHub</li>
+              <li>CMake</li>
+              <li>Matlab</li>
+              <li>JavaScript</li>
+              <li>HTML & CSS</li>
+              <li>Zig</li>
+            </ul>
+          </article>
+          <article class="skill-block">
+            <h3>Méthodes numériques</h3>
+            <ul class="tag-list">
+              <li>Différences finies</li>
+              <li>Volumes finis</li>
+              <li>Galerkin discontinu</li>
+              <li>Éléments finis</li>
+              <li>HHO</li>
+              <li>Intégration numérique</li>
+              <li>Algèbre numérique</li>
+              <li>Optimisation</li>
+              <li>Modélisation stochastique</li>
+              <li>AMR</li>
+            </ul>
+          </article>
+          <article class="skill-block">
+            <h3>Comportementales</h3>
+            <ul class="tag-list">
+              <li>Autonomie</li>
+              <li>Ambition</li>
+              <li>Capacité d’abstraction</li>
+              <li>Esprit analytique</li>
+              <li>Persévérance</li>
+              <li>Ouverture d’esprit</li>
+              <li>Écoute</li>
+            </ul>
+          </article>
+          <article class="skill-block">
+            <h3>Langues</h3>
+            <ul class="pill-list">
+              <li>Français · Langue maternelle</li>
+              <li>Anglais · Langue maternelle</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projets" aria-labelledby="projets-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="projets-title">Projets</h2>
+          <p>Études, simulations, expérimentations et explorations créatives. Chaque carte peut accueillir images, extraits de code, ou visualisations.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-media placeholder" aria-hidden="true">Image à venir</div>
+            <div class="project-content">
+              <h3>Simulation CFD haute-fidélité</h3>
+              <p>Placeholder pour un futur résumé : flux Euler compressible, schémas HLLC, visualisations de champs de pression.</p>
+              <a class="project-link" href="#" aria-label="Voir le projet Simulation CFD">À compléter</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-media placeholder" aria-hidden="true">Code snippet</div>
+            <div class="project-content">
+              <h3>Bibliothèque C++ pour méthodes DG</h3>
+              <p>Placeholder : métaprogrammation, C++20, benchmarks de performance, documentation technique.</p>
+              <a class="project-link" href="#" aria-label="Voir le projet Bibliothèque C++">À compléter</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-media placeholder" aria-hidden="true">Visualisation</div>
+            <div class="project-content">
+              <h3>Explorations mathématiques interactives</h3>
+              <p>Placeholder : visualisations en JavaScript d’ondes, fractales et courbes paramétriques.</p>
+              <a class="project-link" href="#" aria-label="Voir le projet Explorations mathématiques">À compléter</a>
+            </div>
+          </article>
+        </div>
+        <p class="projects-note">Ajoutez facilement vos propres projets : remplacez le texte, les médias et liez vers GitHub, des publications ou des démos interactives.</p>
+      </div>
+    </section>
+
+    <section class="section" id="interets" aria-labelledby="interets-title">
+      <div class="container interests-layout">
+        <div class="section-header">
+          <h2 id="interets-title">Intérêts & Expériences diverses</h2>
+          <p>Ce qui nourrit la créativité scientifique au quotidien.</p>
+        </div>
+        <div class="interests-grid">
+          <article class="interest-card">
+            <h3>Écriture & Orchestration</h3>
+            <p>Composition pour orgue au Conservatoire de Montpellier, exploration des textures sonores et des arrangements dynamiques.</p>
+          </article>
+          <article class="interest-card">
+            <h3>Culture scientifique</h3>
+            <p>Épistémologie, intelligence artificielle, algorithmique, puzzles logiques et échecs pour stimuler l’intuition.</p>
+          </article>
+          <article class="interest-card">
+            <h3>CFD & Simulation</h3>
+            <p>Passion pour les schémas numériques avancés, maillages adaptatifs et méthodes high-order hybrides.</p>
+          </article>
+          <article class="interest-card">
+            <h3>Partage & mentorat</h3>
+            <p>Conception de ressources pédagogiques, participation à des projets open-source, accompagnement de projets étudiants.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> Mutatum. Conçu pour partager recherches, projets et parcours.</p>
+      <a href="#top" class="back-to-top">Retour en haut</a>
+    </div>
+  </footer>
+</body>
+</html>
