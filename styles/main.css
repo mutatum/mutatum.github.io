@@ -312,15 +312,15 @@ body:not(.light-theme) .theme-icon[data-theme="dark"] {
   font-weight: 500;
 }
 
-.section {
-  padding: 4.5rem 0;
-}
-
-.section-header {
-  margin-bottom: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
+.section,
+.hero-card,
+.experience-card,
+.project-card,
+.skill-block,
+.interest-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .section-header h2 {
@@ -632,7 +632,7 @@ body.light-theme .site-footer {
   }
 }
 
-section,
+.section,
 .hero-card,
 .experience-card,
 .project-card,

@@ -16,7 +16,7 @@
     <div class="container header-content">
       <a class="brand" href="#top">
         <span class="brand-mark">∑</span>
-        <span class="brand-text">Mutatum</span>
+        <span class="brand-text">Mutatum · Ronan Choquert</span>
       </a>
       <nav class="main-nav" aria-label="Navigation principale">
         <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
@@ -50,13 +50,24 @@
           <p class="hero-eyebrow">Mathématiques • Simulation numérique • Programmation</p>
           <h1 id="profil">Profil</h1>
           <p class="lead">
-            Déscolarisé devenu programmeur, une passion fondamentale pour les mathématiques est née en moi.
-            J’ai entrepris des études sans perdre de vue mon objectif malgré les embûches. Je souhaite mettre en
-            commun mes compétences au sein d’une équipe ou d’un projet animé par le même enthousiasme.
+            Ronan Choquert, 27 ans — étudiant en Master de Mathématiques (Modélisation & Analyse Numérique). Je suis
+            à la recherche d’un stage de Master 2 (M2) orienté recherche pour approfondir des travaux en
+            mécanique des fluides numérique et méthodes numériques pour EDPs. Mes récents travaux portent sur
+            l’étude des équations d’Euler compressibles et l’implémentation de flux numériques (HLL, HLLC, Roe).
           </p>
+          <ul class="profile-highlights">
+            <li>Compétences : Python, C++/C, GNU/Linux, Git, CMake, Matlab, JS/HTML/CSS.</li>
+            <li>Méthodes : volumes finis, différences finies, Galerkin discontinu (DG), HHO, AMR.</li>
+            <li>Intérêt pour prototypage, métaprogrammation C++ et parallélisation.</li>
+          </ul>
           <div class="hero-actions">
             <a class="button primary" href="#projets">Explorer les projets</a>
             <a class="button ghost" href="#formation">Voir le parcours</a>
+            <a class="button" href="Choquert_Ronan_CV.pdf" download aria-label="Télécharger le CV au format PDF">Télécharger le CV (PDF)</a>
+          </div>
+          <!-- CTA for Master 2 internship (from the resume) -->
+          <div class="hero-cta" style="margin-top:1rem">
+            <a class="button secondary" href="mailto:ronan.choquert@etu.umontpellier.fr?subject=Candidature%20Stage%20M2" aria-label="Contacter par mail">Contacter par mail</a>
           </div>
         </div>
         <div class="hero-card">
@@ -67,15 +78,20 @@
             <dl>
               <div>
                 <dt>Localisation</dt>
-                <dd>Montpellier · Paris</dd>
+                <dd>Montpellier · Ouvert sur la France et Europe</dd>
               </div>
               <div>
                 <dt>Disponibilité</dt>
-                <dd>Stages, collaborations & missions freelance</dd>
+                <dd>Recherche actuellement un stage Master 2</dd>
               </div>
               <div>
                 <dt>Contact</dt>
-                <dd><a href="mailto:contact@mutatum.dev">contact@mutatum.dev</a></dd>
+                <dd>
+                  <a href="mailto:ronan.choquert@etu.umontpellier.fr">ronan.choquert@etu.umontpellier.fr</a><br />
+                  <a href="tel:+33663613666">06 63 61 36 66</a><br />
+                  <a href="https://www.linkedin.com/in/ronan-choquert/" target="_blank" rel="noopener">linkedin.com/in/ronan-choquert/</a><br />
+                  <a href="/">mutatum.github.io</a>
+                </dd>
               </div>
             </dl>
           </div>
@@ -118,7 +134,7 @@
               <span class="timeline-period">2018 — 2019 · Castelnau-le-Lez</span>
               <h3>Baccalauréat Scientifique · Lycée Georges Pompidou</h3>
             </header>
-            <p>Major en mathématiques malgré trois années de déscolarisation. Mention : 17/20 en mathématiques, 17/20 en physique.</p>
+            <p>Obtention du bac après trois années de déscolarisation. Mention : 17/20 en mathématiques, 17/20 en physique, 20/20 en informatique.</p>
           </article>
           <article class="timeline-item">
             <header>
@@ -186,6 +202,8 @@
               <li>JavaScript</li>
               <li>HTML & CSS</li>
               <li>Zig</li>
+              <li>Vim</li>
+              <li>VSCode</li>
             </ul>
           </article>
           <article class="skill-block">
@@ -266,24 +284,16 @@
       <div class="container interests-layout">
         <div class="section-header">
           <h2 id="interets-title">Intérêts & Expériences diverses</h2>
-          <p>Ce qui nourrit la créativité scientifique au quotidien.</p>
+          <p>Ce qui m'intéresse par ailleurs.</p>
         </div>
         <div class="interests-grid">
-          <article class="interest-card">
-            <h3>Écriture & Orchestration</h3>
-            <p>Composition pour orgue au Conservatoire de Montpellier, exploration des textures sonores et des arrangements dynamiques.</p>
-          </article>
           <article class="interest-card">
             <h3>Culture scientifique</h3>
             <p>Épistémologie, intelligence artificielle, algorithmique, puzzles logiques et échecs pour stimuler l’intuition.</p>
           </article>
           <article class="interest-card">
-            <h3>CFD & Simulation</h3>
+            <h3></h3>
             <p>Passion pour les schémas numériques avancés, maillages adaptatifs et méthodes high-order hybrides.</p>
-          </article>
-          <article class="interest-card">
-            <h3>Partage & mentorat</h3>
-            <p>Conception de ressources pédagogiques, participation à des projets open-source, accompagnement de projets étudiants.</p>
           </article>
         </div>
       </div>
@@ -292,10 +302,14 @@
 
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>© <span id="year"></span> Mutatum. Conçu pour partager recherches, projets et parcours.</p>
+      <p><span id="year"></span> Mutatum · Ronan Choquert</p>
       <a href="#top" class="back-to-top">Retour en haut</a>
-      <!-- Footer PDF download link -->
-      <a class="button small" href="Choquert_Ronan_CV.pdf" download aria-label="Télécharger le CV au format PDF">Télécharger le CV (PDF)</a>
+      <!-- Footer contact & CV -->
+      <div class="footer-contacts">
+        <a class="button small" href="Choquert_Ronan_CV.pdf" download aria-label="Télécharger le CV au format PDF">Télécharger le CV (PDF)</a>
+        <a href="mailto:ronan.choquert@etu.umontpellier.fr">ronan.choquert@etu.umontpellier.fr</a>
+        <a href="https://www.linkedin.com/in/ronan-choquert/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </footer>
 </body>
